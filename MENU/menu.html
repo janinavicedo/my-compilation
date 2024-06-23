@@ -1,0 +1,275 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+  <link rel="stylesheet" href="style.css">
+  <style>
+	.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: darkred;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    line-height: 60px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.floating-button:hover {
+    background-color: #D92020;
+    transform: scale(1.1);
+}
+	
+	</style>
+</head>
+<body style="background-image: url('bg.jpg');">
+
+  <div class="navbar" style="text-align: center;">
+    <img src="llg.png" alt="logo" class="restaurant-name" width="600" height="90" style="display: block; margin: 0 auto;">
+    <button onclick="scrollToSection('maindish')"><img src="md.png" alt="main" width="30" height="30">
+	<br>MAIN DISH</button>
+    <button onclick="scrollToSection('vegetable')"><img src="vg.png" alt="main" width="30" height="30">
+	<br>VEGETABLE</button>
+    <button onclick="scrollToSection('dessert')"><img src="ds.png" alt="main" width="30" height="30">
+	<br>DESSERT</button>
+    <button onclick="scrollToSection('drinks')"><img src="dr.png" alt="main" width="30" height="30">
+	<br>DRINKS</button>
+    <button onclick="scrollToSection('addon')"><img src="ao.png" alt="main" width="30" height="30">
+	<br>ADD ONS</button>
+  </div>
+
+<div id="maindish">
+    <table class="menu-table">
+	<caption><b>MAIN DISH</b></caption>
+        <tr>
+            <td style="padding-top:30px;"><img src="a.jpg" alt="AM" class="dish-image" style="border: 5px solid black;"><br><input type="checkbox" style="width: 20px; height: 20px;" name="HAEMUL PAJEON"><span style="font-size:45px; padding-left:20px;padding-right:5px;">Php. 420</span> &nbsp;<input type="number" style="padding-left: 10px;width: 42px; font-size: 20px;" value="0"></td>
+			<td style="padding-top:30px;"><img src="b.jpg" alt="AM" class="dish-image" style="border: 5px solid black;"><br><input type="checkbox" style="width: 20px; height: 20px;" name="DOLSOT BIBIMBAP"><span style="font-size:45px; padding-left:20px;padding-right:5px;">Php. 515</span>&nbsp;<input type="number" style="padding-left: 10px;width: 42px; font-size: 20px;" value="0"></td>
+			<td style="padding-top:30px;"><img src="c.jpg" alt="AM" class="dish-image" style="border: 5px solid black;"><br><input type="checkbox" style="width: 20px; height: 20px;" name="KIMCHI JJIGAE"><span style="font-size:45px; padding-left:20px;padding-right:5px;">Php. 320</span>&nbsp;<input type="number" style="padding-left: 10px;width: 42px; font-size: 20px;" value="0"></td>
+		</tr>	
+		
+        <tr>
+            <td style = "font-size: 34px;"><b>HAEMUL PAJEON</b><span style = "font-size: 24px">&nbsp Popular</span></td>
+            <td style = "font-size: 34px;"><b>DOLSOT BIBIMBAP</b></td>			
+            <td style = "font-size: 34px;"><b>KIMCHI JJIGAE</b><span style = "font-size: 24px">&nbsp Popular</span></td> 
+		</tr>
+
+		<tr>
+			<td>Savory blend of eggs, flour, scallions, and assorted seafood (shrimp, squid, mussels).</td>
+			<td>Steaming stone bowl filled with vibrant vegetables, beef, and egg atop rice.</td>
+            <td>Stew simmered with fermented kimchi, tofu, and slices of pork belly, infused with spicy</td>
+        </tr>
+		
+		<tr>
+			<td style="padding-bottom:15px;border-bottom: 1px solid darkred;">Served with soy-vinegar sesame dip.</td>	
+            <td style="padding-bottom:15px;border-bottom: 1px solid darkred;">Served with spicy gochujang sauce.</td>
+			<td style="padding-bottom:15px;border-bottom: 1px solid darkred;">flavors. Served piping hot, perfect for a soul-warming meal.</td>			
+		</tr>
+
+        <tr>
+			<td style="padding-top:30px;"><img src="d.jpg" alt="AM" class="dish-image" style="border: 5px solid black;"><br><input type="checkbox" style="width: 20px; height: 20px;" name="DAK BULGOGI"><span style="font-size:45px; padding-left:20px;padding-right:5px;">Php. 350</span>&nbsp;<input type="number" style="padding-left: 10px;width: 42px; font-size: 20px;" value="0"></td>
+			<td style="padding-top:30px;"><img src="e.jpg" alt="AM" class="dish-image" style="border: 5px solid black;"><br><input type="checkbox" style="width: 20px; height: 20px;" name="YUKGAEJANG"><span style="font-size:45px; padding-left:20px;padding-right:5px;">Php. 400</span>&nbsp;<input type="number" style="padding-left: 10px;width: 42px; font-size: 20px;" value="0"></td>				
+			<td style="padding-top:30px;"><img src="f.jpg" alt="AM" class="dish-image" style="border: 5px solid black;"><br><input type="checkbox" style="width: 20px; height: 20px;" name="BOSSAM"><span style="font-size:45px; padding-left:20px;padding-right:5px;">Php. 500</span>&nbsp;<input type="number" style="padding-left: 10px;width: 42px; font-size: 20px;" value="0"></td>				
+        </tr>
+
+		<tr>
+			<td style = "font-size: 34px;"><b>DAK BULGOGI</b></td>
+            <td style = "font-size: 34px;"><b>YUKGAEJANG</b></td>                
+            <td style = "font-size: 34px;"><b>BOSSAM</b></td>			
+		</tr>
+		
+		<tr>
+            <td>Succulent grilled Korean chicken served with steamed rice and crisp</td>
+            <td>Spicy beef soup with noodles and a variety of vegetables, rich in traditional Korean flavors.</td>
+            <td>Boiled pork belly served with lettuce, kimchi, and traditional condiments, offering a</td>
+		</tr>
+		
+		<tr>
+			<td style="padding-bottom:30px;">vegetables, bursting with savory flavors.</td>
+			<td></td>
+			<td style="padding-bottom:30px;">delightful blend of flavors and textures.</td>
+        </tr>
+    </table>
+</div>
+
+<div id="vegetable">
+    <table class="menu-table">
+		<caption><b>VEGETABLE</b></caption>
+        <tr>
+            <td style="padding-top:30px;"><img src="g.jpg" alt="AM" class="dish-image" style="border: 5px solid black;"><br><input type="checkbox" style="width: 20px; height: 20px;" name="SIGEUMCHI NAMUL"><span style="font-size:45px; padding-left:20px;padding-right:5px;">Php. 340</span>&nbsp;<input type="number" style="padding-left: 10px;width: 42px; font-size: 20px;" value="0"></td>
+            <td style="padding-top:30px;"><img src="h.jpg" alt="AM" class="dish-image" style="border: 5px solid black;"><br><input type="checkbox" style="width: 20px; height: 20px;" name="YACHAEJEON"><span style="font-size:45px; padding-left:20px;padding-right:5px;">Php. 290</span>&nbsp;<input type="number" style="padding-left: 10px;width: 42px; font-size: 20px;" value="0"></td>               
+            <td style="padding-top:30px;"><img src="i.jpg" alt="AM" class="dish-image" style="border: 5px solid black;"><br><input type="checkbox" style="width: 20px; height: 20px;" name="GAJI BOKKEUM"><span style="font-size:45px; padding-left:20px;padding-right:5px;">Php. 370</span>&nbsp;<input type="number" style="padding-left: 10px;width: 42px; font-size: 20px;" value="0"></td>			
+		</tr>
+		
+		<tr>
+            <td style = "font-size: 34px;"><b>SIGEUMCHI NAMUL</b></td>			
+            <td style = "font-size: 34px;"><b>YACHAEJEON</b><span style = "font-size: 24px"> &nbsp Popular</span></td>
+            <td style = "font-size: 34px;"><b>GAJI BOKKEUM</b></td>
+		</tr>
+		
+		<tr>
+			<td>Garlicky sautéed spinach seasoned with sesame oil and soy sauce.</td>
+            <td>Korean vegetable pancake, golden and savory, a perfect starter or side dish.</td>
+            <td>Stir-fried eggplant slices infused with garlic, soy sauce, and</td>
+        </tr>
+		
+		<tr>
+		<td></td>
+		<td></td>
+		<td style="padding-bottom:30px;">sesame oil—a flavorful Korean side dish.</td>
+		</tr>
+    </table>
+  </div>
+
+  <div id="dessert">
+    <table class="menu-table">
+		<caption><b>DESSERT</b></caption>
+        <tr>
+            <td style="padding-top:30px;"><img src="j.jpg" alt="AM" class="dish-image" style="border: 5px solid black;"><br><input type="checkbox" style="width: 20px; height: 20px;" name="BINGSU"><span style="font-size:45px; padding-left:20px;padding-right:5px;">Php. 120</span>&nbsp;<input type="number" style="padding-left: 10px;width: 42px; font-size: 20px;" value="0"></td>
+            <td style="padding-top:30px;"><img src="k.jpg" alt="AM" class="dish-image" style="border: 5px solid black;"><br><input type="checkbox" style="width: 20px; height: 20px;" name="HOTTEOK"><span style="font-size:45px; padding-left:20px;padding-right:5px;">Php. 170</span>&nbsp;<input type="number" style="padding-left: 10px;width: 42px; font-size: 20px;" value="0"></td>			
+			<td style="padding-top:30px;"><img src="l.jpg" alt="AM" class="dish-image" style="border: 5px solid black;"><br><input type="checkbox" style="width: 20px; height: 20px;" name="TTEOK"><span style="font-size:45px; padding-left:20px;padding-right:5px;">Php. 110</span>&nbsp;<input type="number" style="padding-left: 10px;width: 42px; font-size: 20px;" value="0"></td>		
+		</tr>
+		
+		<tr>
+			<td style = "font-size: 34px;"><b>BINGSU</b><span style = "font-size: 24px"> &nbsp Popular</span></td>
+            <td style = "font-size: 34px;"><b>HOTTEOK</b><span style = "font-size: 24px"> &nbsp Popular</span></td>		
+            <td style = "font-size: 34px;"><b>TTEOK</b></td>
+        </tr>
+		
+        <tr>
+			<td>Korean shaved ice dessert with sweet toppings like condensed milk,</td>
+			<td>Korean sweet pancake filled with brown sugar, cinnamon, and nuts.</td>
+			<td>Traditional Korean rice cakes, available in savory and sweet varieties.</td>				
+        </tr>
+        
+		<tr>
+            <td style="padding-bottom:30px;">red bean paste, fruit, and rice cakes.</td>
+        </tr>
+    </table>
+  </div>
+  
+  <div id="drinks">
+    <table class="menu-table">
+		<caption><b>DRINKS</b></caption>
+        <tr>
+            <td style="padding-top:30px;"><img src="m.jpg" alt="AM" class="dish-image" style="border: 5px solid black;"><br><input type="checkbox" style="width: 20px; height: 20px;" name="CUCUMBER COOLER"><span style="font-size:45px; padding-left:20px;padding-right:5px;">Php. 200</span>&nbsp;<input type="number" style="padding-left: 10px;width: 42px; font-size: 20px;" value="0"></td>
+            <td style="padding-top:30px;"><img src="n.jpg" alt="AM" class="dish-image" style="border: 5px solid black;"><br><input type="checkbox" style="width: 20px; height: 20px;" name="FRUIT PUNCH"><span style="font-size:45px; padding-left:20px;padding-right:5px;">Php. 170</span>&nbsp;<input type="number" style="padding-left: 10px;width: 42px; font-size: 20px;" value="0"></td>		
+            <td style="padding-top:30px;"><img src="o.jpg" alt="AM" class="dish-image" style="border: 5px solid black;"><br><input type="checkbox" style="width: 20px; height: 20px;" name="ITALIAN SODA"><span style="font-size:45px; padding-left:20px;padding-right:5px;">Php. 210</span>&nbsp;<input type="number" style="padding-left: 10px;width: 42px; font-size: 20px;" value="0"></td>
+		</tr>
+		
+		<tr>
+            <td style = "font-size: 34px;"><b>CUCUMBER COOLER</b><span style = "font-size: 24px"> &nbsp Popular</span></td>
+			<td style = "font-size: 34px;"><b>FRUIT PUNCH</b></td>                
+			<td style = "font-size: 34px;"><b>ITALIAN SODA</b></td>				
+
+		</tr>
+		
+		<tr>
+			<td> Made with muddled cucumber, lime juice, simple syrup, and soda water, served over ice.</td>
+			<td>A mixture of various fruit juices such as orange, pineapple, and cranberry,</td> 
+			<td> Carbonated water mixed with flavored syrup, often topped with cream,</td>
+        </tr>
+		
+        <tr>
+			<td></td>
+			<td style="padding-bottom:30px;">sometimes combined with soda water for fizziness.</td>
+			<td style="padding-bottom:30px;">whipped cream, and a cherry garnish.</td>
+        </tr>
+    </table>
+  </div>
+  
+  <div id="addon">
+    <table class="menu-table">
+		<caption><b>ADD ONS</b></caption>
+        <tr>
+            <td style="padding-top:30px;"><img src="p.jpg" alt="AM" class="dish-image" style="border: 5px solid black;"><br><input type="checkbox" style="width: 20px; height: 20px;" name="KIMCHI"><span style="font-size:45px; padding-left:20px;padding-right:5px;">Php. 100</span>&nbsp;<input type="number" style="padding-left: 10px;width: 42px; font-size: 20px;" value="0"></td>
+            <td style="padding-top:30px;"><img src="q.jpg" alt="AM" class="dish-image" style="border: 5px solid black;"><br><input type="checkbox" style="width: 20px; height: 20px;" name="JANGAJJI"><span style="font-size:45px; padding-left:20px;padding-right:5px;">Php. 120</span>&nbsp;<input type="number" style="padding-left: 10px;width: 42px; font-size: 20px;" value="0"></td>			
+            <td style="padding-top:30px;"><img src="r.jpg" alt="AM" class="dish-image" style="border: 5px solid black;"><br><input type="checkbox" style="width: 20px; height: 20px;" name="JAPCHAE"><span style="font-size:45px; padding-left:20px;padding-right:5px;">Php. 150</span>&nbsp;<input type="number" style="padding-left: 10px;width: 42px; font-size: 20px;" value="0"></td>			
+		</tr>
+		
+		<tr>
+            <td style = "font-size: 34px;"><b>KIMCHI</b></td>
+            <td style = "font-size: 34px;"><b>JANGAJJI</b></td>
+            <td style = "font-size: 34px;"><b>JAPCHAE</b></td>			
+		</tr>
+		
+		<tr>
+            <td>House-made Korean delight adds a spicy kick to any dish.</td>
+            <td>Korean pickled vegetables in tangy brine, a zesty side dish.</td>
+            <td>Stir-fried sweet potato glass noodles with colorful veggies,</td>
+        </tr>
+		
+		<tr>
+			<td></td>
+			<td></td>
+			<td style="padding-bottom:30px;">seasoned with soy sauce and sesame oil.</td>
+		</tr>
+    </table>
+  </div>
+  
+  <div style="text-align: center; margin-top: 20px; margin-bottom:20px;">
+    <button onclick="scrollToCalculateTotal()" class="order-complete-btn" style="font-size: 20px; background-color: darkred; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">ORDER COMPLETE</button>
+  </div>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <div style="width: 70%; text-align: center;">
+    <div style="background-color: darkred; padding: 20px; border: 2px solid #ccc; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+      <div id="order-summary" style="color: white;">
+        <h1>YOUR ORDER SUMMARY</h1>
+        <hr style="border-top: 2px dashed white; margin: 0 auto; width: 90%;">
+        <br>
+        <table style="margin: 0 auto; width:90%">
+          <tr>
+            <td style="text-align: center; font-size: 20px; font-weight: bold;">Discount:</td>
+            <td rowspan="2" style="vertical-align: top;">
+              <input type="radio" id="noDiscount" name="discount" value="0" checked>
+              <label for="noDiscount" style="font-size: 20px;">No Discount</label><br>
+              <input type="radio" id="pwdDiscount" name="discount" value="0.20">
+              <label for="pwdDiscount" style="font-size: 20px;">PWD (20%)</label><br>
+              <input type="radio" id="seniorDiscount" name="discount" value="0.25">
+              <label for="seniorDiscount" style="font-size: 20px;">Senior Citizen (25%)</label><br>
+			</td>
+            <td style="text-align: center; font-size: 20px; font-weight: bold;">Selected Items:</td>
+            <td id="selectedItems" rowspan="2" style="vertical-align: top; font-size: 20px; font-weight: bold;"></td>
+            <td style="text-align: center; font-size: 20px; font-weight: bold;">Total Amount:</td>
+          </tr>
+          
+		  <tr>
+            <td></td>
+            <td colspan="2"></td>
+            <td rowspan="2" style="vertical-align: middle; text-align: center; font-size: 50px;">
+              Php. <span id="totalAmount" style="font-size: 50px; font-weight: bold;">0</span><br>
+              <button onclick="calculateTotal()" style="font-size: 20px; background-color: crimson; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px;">Calculate Total</button>
+            </td>
+          </tr>
+          
+		  <tr>
+            <td colspan="3"></td>
+          </tr>
+        
+		</table>
+      </div>
+    </div>
+  </div>
+</div>
+<a href="file:///C:/Users/63965/Desktop/ITEC87_PROJECT/page2.html" class="floating-button">&#127968;</a>
+
+
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>

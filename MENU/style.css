@@ -1,0 +1,95 @@
+body {
+      margin: 0;
+      padding: 0;
+	  color: white;
+      background-size: cover;
+      background-position: center;
+      font-family: 'Amatic SC', sans-serif;
+    }
+
+    h2, h3 {
+      font-size: 24px; 
+      margin-top: 20px;
+    }
+
+    .navbar {
+      position: fixed;
+      width: 100%;
+      background-color: #761217;
+      text-align: center;
+      z-index: 100; 
+    }
+	
+    .navbar button {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease; 
+    }
+    .navbar button:hover {
+      background-color: #9F0710; 
+    }
+	
+    .restaurant-name {
+      font-size: 24px;
+      margin-top: 5px;
+    }
+    .menu-item {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      justify-items: center;
+    }
+    .dish-image {
+	  border-radius: 50%; /* Makes the images circular */
+      transition: border-radius 0.3s;
+      width: 200px;
+      height: 200px;
+      margin-bottom: 10px;
+    }
+	
+	.dish-image:hover {
+  border-radius: 0; /* Makes the images square on hover */
+}
+
+	button:hover {
+	  background-color: #9F0710;
+	}
+	
+
+caption {
+	margin-top: 150px;
+    background-color: #9B1E2E;
+    color: white;
+    text-align: center;
+	font-size: 45;
+	padding:20px;
+}
+
+    .menu-table {
+	  border: 1px;
+      width: 90%;
+	  border-collapse: collapse;
+	  text-align: center;
+	  table-layout: fixed;
+	  margin-left: auto;
+      margin-right: auto;
+	  border: 1px solid darkred;
+    }
+
+.order-complete-btn {
+  background-color: darkred;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.order-complete-btn:hover {
+  background-color: crimson;
+}
+

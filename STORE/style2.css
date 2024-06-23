@@ -1,0 +1,74 @@
+.container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+			margin-top: 20px;
+        }
+		
+		caption{
+		font-size: 30px;
+		font-weight: bold;
+		background-color: #00B4D8;
+		border: 3px solid black;
+		
+		}
+
+        th, td {
+            border: 2px solid black;
+            text-align: left;
+            padding: 8px;
+			width: 33.33%;
+        }
+
+        th {
+            background-color: #0096C7;
+			text-align: center;
+        }
+		
+		td:nth-child(1) {
+    text-align: center;
+}
+		
+		td:nth-child(2) {
+    text-align: center;
+}
+
+
+td:nth-child(3) {
+    text-align: center;
+}
+
+td input[type="number"], td button {
+    display: block;
+    margin: 0 auto;
+}
+
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px; 
+        }
+		
+		h1{
+		 font-family: "Brush Script MT", cursive;
+		 font-size: 60px;
+		 text-align:center;
+		}
+		
+		button {
+    background-color: #517594; 
+    color: #fff;
+    border: none;
+    padding: 5px 12px;
+    cursor: pointer;
+	margin-bottom: 5px;
+    transition: background-color 0.3s ease; 
+}
+
+button:hover {
+    background-color: #AFC4D6; 
+}

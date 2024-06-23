@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Page</title>
+    <link rel="stylesheet" href="style.css">
+	<style>
+	.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #304C62;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    line-height: 60px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.floating-button:hover {
+    background-color: #D92020;
+    transform: scale(1.1);
+}
+	
+	</style>
+
+</head>
+<body>
+ <div class="navbar">
+    <div class="navbar-logo">
+        <img src="lg.png" alt="logo" class="restaurant-name" width="250" height="50" style="display: block; margin: 0 auto;">
+    </div>
+    <div class="navbar-buttons">
+        <button class="navbar-button" onclick="filterProducts('Jeans')">
+            <img src="b1.png" alt="main" width="30" height="30"><br>Jeans
+        </button>
+        <button class="navbar-button" onclick="filterProducts('T-shirt')">
+            <img src="b2.png" alt="main" width="30" height="30"><br>T-shirt
+        </button>
+        <button class="navbar-button" onclick="filterProducts('Perfume')">
+            <img src="b3.png" alt="main" width="30" height="30"><br>Perfume
+        </button>
+        <button class="navbar-button" onclick="filterProducts('Sando')">
+            <img src="b4.png" alt="main" width="30" height="30"><br>Sando
+        </button>
+        <button class="navbar-button" onclick="filterProducts('Toys')">
+            <img src="b5.png" alt="main" width="30" height="30"><br>Toys
+        </button>
+        <button class="navbar-button" onclick="showAllProducts()">
+            <img src="b6.png" alt="main" width="30" height="30"><br>All Items
+        </button>
+        <button class="navbar-button" onclick="goToStockRoom()">
+            <img src="b7.png" alt="main" width="30" height="30"><br>Stockroom
+        </button>
+    </div>
+</div>
+
+
+  <div class="container">
+    <div class="product jeans">
+	<img src="j1.jpg" alt="Cargo Jeans" class="product-image">
+      <h2>Cargo Jeans</h2>
+      <p>PHP 2,500</p>
+	  <p class="remaining-stock-label">Remaining Stock: <span id="remaining-stock-CargoJeans" class="remaining-stock">15</span></p>
+	  <div class="quantity-container">
+        <button class="quantity-btn" onclick="decrementQuantity('Cargo Jeans')">-</button>
+        <span id="quantity-CargoJeans" class="quantity">1</span>
+        <button class="quantity-btn" onclick="incrementQuantity('Cargo Jeans')">+</button>
+    </div>
+      <button onclick="addToCart('Cargo Jeans', 20)">Add to Cart</button>
+    </div>
+	<div class="product jeans">
+	<img src="j2.jpg" alt="Baggy Jeans" class="product-image">
+      <h2>Baggy Jeans</h2>
+      <p>PHP 3,000</p>
+	  <p class="remaining-stock-label">Remaining Stock: <span id="remaining-stock-BaggyJeans" class="remaining-stock">15</span></p>
+	  <div class="quantity-container">
+        <button class="quantity-btn" onclick="decrementQuantity('Baggy Jeans')">-</button>
+        <span id="quantity-BaggyJeans" class="quantity">1</span>
+        <button class="quantity-btn" onclick="incrementQuantity('Baggy Jeans')">+</button>
+    </div>
+      <button onclick="addToCart('Baggy Jeans', 20)">Add to Cart</button>
+    </div>
+	<div class="product jeans">
+	<img src="j3.jpg" alt="Flared Jeans" class="product-image">
+      <h2>Flared Jeans</h2>
+      <p>PHP 3,700</p>
+	  <p class="remaining-stock-label">Remaining Stock: <span id="remaining-stock-FlaredJeans" class="remaining-stock">15</span></p>
+	  <div class="quantity-container">
+        <button class="quantity-btn" onclick="decrementQuantity('Flared Jeans')">-</button>
+        <span id="quantity-FlaredJeans" class="quantity">1</span>
+        <button class="quantity-btn" onclick="incrementQuantity('Flared Jeans')">+</button>
+    </div>
+      <button onclick="addToCart('Flared Jeans', 20)">Add to Cart</button>
+    </div>
+	<div class="product jeans">
+	<img src="j4.jpg" alt="Ripped Jeans" class="product-image">
+      <h2>Ripped Jeans</h2>
+      <p>PHP 2,000</p>
+	  <p class="remaining-stock-label">Remaining Stock: <span id="remaining-stock-RippedJeans"class="remaining-stock">15</span></p>
+	  <div class="quantity-container">
+        <button class="quantity-btn" onclick="decrementQuantity('Ripped Jeans')">-</button>
+        <span id="quantity-RippedJeans" class="quantity">1</span>
+        <button class="quantity-btn" onclick="incrementQuantity('Ripped Jeans')">+</button>
+    </div>
+      <button onclick="addToCart('Ripped Jeans', 20)">Add to Cart</button>
+    </div>
+	
+	<div class="product t-shirt">
+	<img src="t1.jpg" alt="shirt" class="product-image">
+      <h2>DEGRADED Crew Neck Tee</h2>
+      <p>PHP 500</p>
+	  <p class="remaining-stock-label">Remaining Stock: <span id="remaining-stock-DEGRADEDCrewNeckTee" class="remaining-stock">15</span></p>
+	  <div class="quantity-container">
+        <button class="quantity-btn" onclick="decrementQuantity('DEGRADED Crew Neck Tee')">-</button>
+        <span id="quantity-DEGRADEDCrewNeckTee" class="quantity">1</span>
+        <button class="quantity-btn" onclick="incrementQuantity('DEGRADED Crew Neck Tee')">+</button>
+    </div>
+      <button onclick="addToCart('DEGRADED Crew Neck Tee', 15)">Add to Cart</button>
+    </div>
+	<div class="product t-shirt">
+	<img src="t2.jpg" alt="shirt" class="product-image">
+      <h2>Buzzer Beater Paisley Tee</h2>
+      <p>PHP 650</p>
+	  <p class="remaining-stock-label">Remaining Stock: <span id="remaining-stock-BuzzerBeaterPaisleyTee" class="remaining-stock">15</span></p>
+	  <div class="quantity-container">
+        <button class="quantity-btn" onclick="decrementQuantity('Buzzer Beater Paisley Tee')">-</button>
+        <span id="quantity-BuzzerBeaterPaisleyTee" class="quantity">1</span>
+        <button class="quantity-btn" onclick="incrementQuantity('Buzzer Beater Paisley Tee')">+</button>
+    </div>
+      <button onclick="addToCart('Buzzer Beater Paisley Tee', 15)">Add to Cart</button>
+    </div>
+	<div class="product t-shirt">
+	<img src="t3.jpg" alt="shirt" class="product-image">
+      <h2>SNUG Boxy Fit Shirt</h2>
+      <p>PHP 600</p>
+	  <p class="remaining-stock-label">Remaining Stock: <span id="remaining-stock-SNUGboxyfitshirt" class="remaining-stock">15</span></p>
+	  <div class="quantity-container">
+        <button class="quantity-btn" onclick="decrementQuantity('SNUG boxy fit shirt')">-</button>
+        <span id="quantity-SNUGboxyfitshirt" class="quantity">1</span>
+        <button class="quantity-btn" onclick="incrementQuantity('SNUG boxy fit shirt')">+</button>
+    </div>
+      <button onclick="addToCart('SNUG boxy fit shirt', 15)">Add to Cart</button>
+    </div>
+	<div class="product t-shirt">
+	<img src="t4.jpg" alt="shirt" class="product-image">
+      <h2>MYX Beyond Culture Shirt</h2>
+      <p>PHP 580</p>
+	  <p class="remaining-stock-label">Remaining Stock: <span id="remaining-stock-MYXBeyondCultureshirt" class="remaining-stock">15</span></p>
+	  <div class="quantity-container">
+        <button class="quantity-btn" onclick="decrementQuantity('MYX Beyond Culture shirt')">-</button>
+        <span id="quantity-MYXBeyondCultureshirt" class="quantity">1</span>
+        <button class="quantity-btn" onclick="incrementQuantity('MYX Beyond Culture shirt')">+</button>
+    </div>
+      <button onclick="addToCart('MYX Beyond Culture shirt', 15)">Add to Cart</button>
+    </div>
+	
+    <div class="product perfume">
+	<img src="p1.jpg" alt="perfume" class="product-image">
+      <h2>Katy Perry 
+	  <br>Meow</h2>
+      <p>PHP 5,500</p>
+	  <p class="remaining-stock-label">Remaining Stock: <span id="remaining-stock-KatyPerryMeow" class="remaining-stock">15</span></p>
+	  <div class="quantity-container">
+        <button class="quantity-btn" onclick="decrementQuantity('Katy Perry Meow')">-</button>
+        <span id="quantity-KatyPerryMeow" class="quantity">1</span>
+        <button class="quantity-btn" onclick="incrementQuantity('Katy Perry Meow')">+</button>
+    </div>
+      <button onclick="addToCart('Katy Perry Meow', 30)">Add to Cart</button>
+    </div>
+	<div class="product perfume">
+	<img src="p2.jpg" alt="perfume" class="product-image">
+      <h2>Versace Eros Flame</h2>
+      <p>PHP 8,000</p>
+	  <p class="remaining-stock-label">Remaining Stock: <span id="remaining-stock-VersaceErosFlame" class="remaining-stock">15</span></p>
+	   <div class="quantity-container">
+        <button class="quantity-btn" onclick="decrementQuantity('Versace Eros Flame')">-</button>
+        <span id="quantity-VersaceErosFlame" class="quantity">1</span>
+        <button class="quantity-btn" onclick="incrementQuantity('Versace Eros Flame')">+</button>
+    </div>
+      <button onclick="addToCart('Versace Eros Flame', 30)">Add to Cart</button>
+    </div>
+	<div class="product perfume">
+	<img src="p3.jpg" alt="perfume" class="product-image">
+      <h2>Giorgio Armani Acqua di Gio</h2>
+      <p>PHP 7,500</p>
+	  <p class="remaining-stock-label">Remaining Stock: <span id="remaining-stock-GiorgioArmaniAcquadiGio" class="remaining-stock">15</span></p>
+	  <div class="quantity-container">
+        <button class="quantity-btn" onclick="decrementQuantity('Giorgio Armani Acqua di Gio')">-</button>
+        <span id="quantity-GiorgioArmaniAcquadiGio" class="quantity">1</span>
+        <button class="quantity-btn" onclick="incrementQuantity('Giorgio Armani Acqua di Gio')">+</button>
+    </div>
+      <button onclick="addToCart('Giorgio Armani Acqua di Gio', 30)">Add to Cart</button>
+    </div>
+	<div class="product perfume">
+	<img src="p4.jpg" alt="perfume" class="product-image">
+      <h2>Le Labo Another 13</h2>
+      <p>PHP 9,500</p>
+	  <p class="remaining-stock-label">Remaining Stock: <span id="remaining-stock-LeLaboAnother13" class="remaining-stock">15</span></p>
+	  <div class="quantity-container">
+        <button class="quantity-btn" onclick="decrementQuantity('Le Labo Another 13')">-</button>
+        <span id="quantity-LeLaboAnother13" class="quantity">1</span>
+        <button class="quantity-btn" onclick="incrementQuantity('Le Labo Another 13')">+</button>
+    </div>
+      <button onclick="addToCart('Le Labo Another 13', 30)">Add to Cart</button>
+    </div>
+
+	 <div class="product sando">
+	 <img src="s1.jpg" alt="sando" class="product-image">
+      <h2>INSPI Muscle 
+	  <br>Tee</h2>
+      <p>PHP 700</p>
+	  <pclass="remaining-stock-label">Remaining Stock: <span id="remaining-stock-INSPIMuscleTee" class="remaining-stock">15</span></p>
+	  <div class="quantity-container">
+        <button class="quantity-btn" onclick="decrementQuantity('INSPI Muscle Tee')">-</button>
+        <span id="quantity-INSPIMuscleTee" class="quantity">1</span>
+        <button class="quantity-btn" onclick="incrementQuantity('INSPI Muscle Tee')">+</button>
+    </div>
+      <button onclick="addToCart('INSPI Muscle Tee', 10)">Add to Cart</button>
+    </div>
+	<div class="product sando">
+	<img src="s2.jpg" alt="sando" class="product-image">
+      <h2>ZARA Racerback Tank Top</h2>
+      <p>PHP 300</p>
+	  <p class="remaining-stock-label">Remaining Stock: <span id="remaining-stock-ZARARacerbackTankTop" class="remaining-stock">15</span></p>
+	  <div class="quantity-container">
+        <button class="quantity-btn" onclick="decrementQuantity('ZARA Racerback Tank Top')">-</button>
+        <span id="quantity-ZARARacerbackTankTop" class="quantity">1</span>
+        <button class="quantity-btn" onclick="incrementQuantity('ZARA Racerback Tank Top')">+</button>
+    </div>
+      <button onclick="addToCart(' ZARA Racerback Tank Top', 10)">Add to Cart</button>
+    </div>
+	<div class="product sando">
+	<img src="s3.jpg" alt="sando" class="product-image">
+      <h2>Adidas Terrex Xperior Singlet</h2>
+      <p>PHP 1,200</p>
+	  <p class="remaining-stock-label">Remaining Stock: <span id="remaining-stock-AdidasTerrexXperiorSinglet" class="remaining-stock">15</span></p>
+	  <div class="quantity-container">
+        <button class="quantity-btn" onclick="decrementQuantity('Adidas Terrex Xperior Singlet')">-</button>
+        <span id="quantity-AdidasTerrexXperiorSinglet" class="quantity">1</span>
+        <button class="quantity-btn" onclick="incrementQuantity('Adidas Terrex Xperior Singlet')">+</button>
+    </div>
+      <button onclick="addToCart('Adidas Terrex Xperior Singlet', 10)">Add to Cart</button>
+    </div>
+	<div class="product sando">
+	<img src="s4.jpg" alt="sando" class="product-image">
+      <h2>Under Armour Breeze Tank</h2>
+      <p>PHP 900</p>
+	  <p class="remaining-stock-label">Remaining Stock: <span id="remaining-stock-UnderArmourBreezeTank" class="remaining-stock">15</span></p>
+	  <div class="quantity-container">
+        <button class="quantity-btn" onclick="decrementQuantity('Under Armour Breeze Tank')">-</button>
+        <span id="quantity-UnderArmourBreezeTank" class="quantity">1</span>
+        <button class="quantity-btn" onclick="incrementQuantity('Under Armour Breeze Tank')">+</button>
+    </div>
+      <button onclick="addToCart('Under Armour Breeze Tank', 10)">Add to Cart</button>
+    </div>
+	
+	
+    <div class="product toys">
+	<img src="l1.jpg" alt="toy" class="product-image">
+      <h2>Quick Push 
+	  <br>Pop It</h2>
+      <p>PHP 600</p>
+	  <p class="remaining-stock-label">Remaining Stock: <span id="remaining-stock-QuickPushPopIt"class="remaining-stock">15</span></p>
+	  <div class="quantity-container">
+        <button class="quantity-btn" onclick="decrementQuantity('Quick Push Pop It')">-</button>
+        <span id="quantity-QuickPushPopIt" class="quantity">1</span>
+        <button class="quantity-btn" onclick="incrementQuantity('Quick Push Pop It')">+</button>
+    </div>
+      <button onclick="addToCart('Quick Push Pop It', 25)">Add to Cart</button>
+    </div>
+	<div class="product toys">
+	<img src="l2.jpg" alt="toy" class="product-image">
+      <h2>Teddy 
+	  <br>Bear</h2>
+      <p>PHP 1,000</p>
+	  <p class="remaining-stock-label">Remaining Stock: <span id="remaining-stock-TeddyBear" class="remaining-stock">15</span></p>
+	  <div class="quantity-container">
+        <button class="quantity-btn" onclick="decrementQuantity('Teddy Bear')">-</button>
+        <span id="quantity-TeddyBear" class="quantity">1</span>
+        <button class="quantity-btn" onclick="incrementQuantity('Teddy Bear')">+</button>
+    </div>
+      <button onclick="addToCart('Teddy Bear', 25)">Add to Cart</button>
+    </div>
+	<div class="product toys">
+	<img src="l3.jpg" alt="toy" class="product-image">
+      <h2>Remote Control Car</h2>
+      <p>PHP 1,300</p>
+	  <p class="remaining-stock-label">Remaining Stock: <span id="remaining-stock-RemoteControlCar" class="remaining-stock">15</span></p>
+	  <div class="quantity-container">
+        <button class="quantity-btn" onclick="decrementQuantity('Remote Control Car')">-</button>
+        <span id="quantity-RemoteControlCar" class="quantity">1</span>
+        <button class="quantity-btn" onclick="incrementQuantity('Remote Control Car')">+</button>
+    </div>
+      <button onclick="addToCart('Remote Control Car', 25)">Add to Cart</button>
+    </div>
+	<div class="product toys">
+	<img src="l4.jpg" alt="toy" class="product-image">
+      <h2>Kuromi 
+	  <br>Plushie</h2>
+      <p>PHP 950</p>
+	  <p class="remaining-stock-label">Remaining Stock: <span id="remaining-stock-KuromiPlushie" class="remaining-stock">15</span></p>
+	  <div class="quantity-container">
+        <button class="quantity-btn" onclick="decrementQuantity('Kuromi Plushie')">-</button>
+        <span id="quantity-KuromiPlushie" class="quantity">1</span>
+        <button class="quantity-btn" onclick="incrementQuantity('Kuromi Plushie')">+</button>
+    </div>
+      <button onclick="addToCart('Kuromi Plushie', 25)">Add to Cart</button>
+    </div>
+  </div>
+  
+  <div class="cart">
+  <h2>Shopping Cart</h2>
+  <hr>
+  <div id="cart-items"></div>
+  <hr>
+  <div>
+    <h3>Discount Options</h3>
+    <input type="radio" id="senior" name="discount" value="senior" onclick="applyDiscount()">
+    <label for="senior">Senior (20% Discount)</label><br>
+    <input type="radio" id="pwd" name="discount" value="pwd" onclick="applyDiscount()">
+    <label for="pwd">PWD (30% Discount)</label><br>
+    <input type="radio" id="student" name="discount" value="student" onclick="applyDiscount()">
+    <label for="student">Student (10% Discount)</label><br>
+    <input type="radio" id="none" name="discount" value="none" onclick="applyDiscount()" checked>
+    <label for="none">No Discount</label>
+  </div>
+  <p>Total: PHP <span id="cart-total">0</span></p>
+  <div class="generate-order-container">
+    <button onclick="generateNewOrder()">Place Order</button>
+  </div>
+</div>
+
+<a href="file:///C:/Users/63965/Desktop/ITEC87_PROJECT/page2.html" class="floating-button">&#127968;</a>
+  
+ <script src="script.js"></script>
+
+</body>
+</html>

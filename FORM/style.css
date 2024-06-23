@@ -1,0 +1,51 @@
+.rcolor {
+    color: darkred;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid darkred;
+}
+
+h2 {
+    margin-bottom: 1px;
+}
+
+td,
+th {
+    padding: 1px;
+    color: darkred;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+th {
+    border: 1px solid darkred;
+}
+
+caption {
+    background-color: darkred;
+    color: white;
+    text-align: center;
+    font-family: Arial;
+}
+
+.left-image {
+    position: absolute;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    top: 20px;
+}
+
+.right-image {
+    position: absolute;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    top: 20px;
+}

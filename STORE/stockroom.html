@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Room</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body style="background-color: #CFE9F3;">
+    <div class="container">
+        <a href="store.html"><button>Go to Store</button></a>
+        <h1>- Stockroom -</h1>
+        <table>
+		<caption>Jeans</caption>
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Current Stock</th>
+                    <th>Add Stock</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cargo Jeans</td>
+                    <td id="stock-CargoJeans">15</td>
+                    <td><input type="number" id="add-stock-CargoJeans"><button onclick="addStockFromStockRoom('Cargo Jeans')">Add Stock</button></td>
+                </tr>
+                <tr>
+                    <td>Baggy Jeans</td>
+                    <td id="stock-BaggyJeans">15</td>
+                    <td><input type="number" id="add-stock-BaggyJeans"><button onclick="addStockFromStockRoom('Baggy Jeans')">Add Stock</button></td>
+                </tr>
+                <tr>
+                    <td>Flared Jeans</td>
+                    <td id="stock-FlaredJeans">15</td>
+                    <td><input type="number" id="add-stock-FlaredJeans"><button onclick="addStockFromStockRoom('Flared Jeans')">Add Stock</button></td>
+                </tr>
+                <tr>
+                    <td>Ripped Jeans</td>
+                    <td id="stock-RippedJeans">15</td>
+                    <td><input type="number" id="add-stock-RippedJeans"><button onclick="addStockFromStockRoom('Ripped Jeans')">Add Stock</button></td>
+                </tr>
+            </tbody>
+        </table>
+		
+		<table>
+		<caption>T-Shirt</caption>
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Current Stock</th>
+                    <th>Add Stock</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>DEGRADED Crew Neck Tee</td>
+                    <td id="stock-DEGRADEDCrewNeckTee">15</td>
+                    <td><input type="number" id="add-stock-DEGRADEDCrewNeckTee"><button onclick="addStockFromStockRoom('DEGRADED Crew Neck Tee')">Add Stock</button></td>
+                </tr>
+                <tr>
+                    <td>Buzzer Beater Paisley Tee</td>
+                    <td id="stock-BuzzerBeaterPaisleyTee">15</td>
+                    <td><input type="number" id="add-stock-BuzzerBeaterPaisleyTee"><button onclick="addStockFromStockRoom('Buzzer Beater Paisley Tee')">Add Stock</button></td>
+                </tr>
+                <tr>
+                    <td>SNUG Boxy Fit Shirt</td>
+                    <td id="stock-SNUGBoxyFitShirt">15</td>
+                    <td><input type="number" id="add-stock-SNUGBoxyFitShirt"><button onclick="addStockFromStockRoom('SNUG Boxy Fit Shirt')">Add Stock</button></td>
+                </tr>
+                <tr>
+                    <td>MYX Beyond Culture Shirt</td>
+                    <td id="stock-MYXBeyondCultureShirt">15</td>
+                    <td><input type="number" id="add-stock-MYXBeyondCultureShirt"><button onclick="addStockFromStockRoom('MYX Beyond Culture Shirt')">Add Stock</button></td>
+                </tr>
+            </tbody>
+        </table>
+		
+		<table>
+		<caption>Perfume</caption>
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Current Stock</th>
+                    <th>Add Stock</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Katy Perry Meow</td>
+                    <td id="stock-KatyPerryMeow">15</td>
+                    <td><input type="number" id="add-stock-KatyPerryMeow"><button onclick="addStockFromStockRoom('Katy Perry Meow')">Add Stock</button></td>
+                </tr>
+                <tr>
+                    <td>Versace Eros Flame</td>
+                    <td id="stock-VersaceErosFlame">15</td>
+                    <td><input type="number" id="add-stock-VersaceErosFlame"><button onclick="addStockFromStockRoom('Versace Eros Flame')">Add Stock</button></td>
+                </tr>
+                <tr>
+                    <td>Giorgio Armani Acqua di Gio</td>
+                    <td id="stock-GiorgioArmaniAcquadiGio">15</td>
+                    <td><input type="number" id="add-stock-GiorgioArmaniAcquadiGio"><button onclick="addStockFromStockRoom('Giorgio Armani Acqua di Gio')">Add Stock</button></td>
+                </tr>
+                <tr>
+                    <td>Le Labo Another 13</td>
+                    <td id="stock-LeLaboAnother13">15</td>
+                    <td><input type="number" id="add-stock-LeLaboAnother13"><button onclick="addStockFromStockRoom('Le Labo Another 13')">Add Stock</button></td>
+                </tr>
+            </tbody>
+        </table>
+		
+		<table>
+		<caption>Sando</caption>
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Current Stock</th>
+                    <th>Add Stock</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>INSPI Muscle Tee</td>
+                    <td id="stock-INSPIMuscleTee">15</td>
+                    <td><input type="number" id="add-stock-INSPIMuscleTee"><button onclick="addStockFromStockRoom('INSPI Muscle Tee')">Add Stock</button></td>
+                </tr>
+                <tr>
+                    <td>ZARA Racerback Tank Top</td>
+                    <td id="stock-ZARARacerbackTankTop">15</td>
+                    <td><input type="number" id="add-stock-ZARARacerbackTankTop"><button onclick="addStockFromStockRoom('ZARA Racerback Tank Top')">Add Stock</button></td>
+                </tr>
+                <tr>
+                    <td>Adidas Terrex Xperior Singlet</td>
+                    <td id="stock-AdidasTerrexXperiorSinglet">15</td>
+                    <td><input type="number" id="add-stock-AdidasTerrexXperiorSinglet"><button onclick="addStockFromStockRoom('Adidas Terrex Xperior Singlet')">Add Stock</button></td>
+                </tr>
+                <tr>
+                    <td>Under Armour Breeze Tank</td>
+                    <td id="stock-UnderArmourBreezeTank">15</td>
+                    <td><input type="number" id="add-stock-UnderArmourBreezeTank"><button onclick="addStockFromStockRoom('Under Armour Breeze Tank')">Add Stock</button></td>
+                </tr>
+            </tbody>
+        </table>
+		
+		<table>
+		<caption>Toys</caption>
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Current Stock</th>
+                    <th>Add Stock</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Quick Push Pop It</td>
+                    <td id="stock-QuickPushPopIt">15</td>
+                    <td><input type="number" id="add-stock-QuickPushPopIt"><button onclick="addStockFromStockRoom('Quick Push Pop It')">Add Stock</button></td>
+                </tr>
+                <tr>
+                    <td>Teddy Bear</td>
+                    <td id="stock-TeddyBear">15</td>
+                    <td><input type="number" id="add-stock-TeddyBear"><button onclick="addStockFromStockRoom('Teddy Bear')">Add Stock</button></td>
+                </tr>
+                <tr>
+                    <td>Remote Control Car</td>
+                    <td id="stock-RemoteControlCar">15</td>
+                    <td><input type="number" id="add-stock-RemoteControlCar"><button onclick="addStockFromStockRoom('Remote Control Car')">Add Stock</button></td>
+                </tr>
+                <tr>
+                    <td>Kuromi Plushie</td>
+                    <td id="stock-KuromiPlushie">15</td>
+                    <td><input type="number" id="add-stock-KuromiPlushie"><button onclick="addStockFromStockRoom('Kuromi Plushie')">Add Stock</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
